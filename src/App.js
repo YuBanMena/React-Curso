@@ -4,30 +4,16 @@ import './App.css';
 
 class App extends Component {
   render() {
-    const siglo=21;
-    const persona = {
-      nombre:'Juan',
-      edad: 34
-    }
-
-
+    const buscadores=['http://www.google.com',
+                      'http://www.bing.com',
+                      'http://www.yahoo.com'];
     return (
       <div>
-        <h1>Título Nivel 1</h1> 
-        <hr/>
-      <p>Estamos en el siglo {siglo}</p>
-      <h3>Acceso a un objeto</h3>
-      <p>{persona.nombre} tiene {persona.edad} años</p>
-      <p>Un valor aleatorio llamado a un método</p>
-      {this.retornarAleatorio()}
-      <h3>Calculo inmediato de Expresiones</h3>
-      3+3={3+3}
+        <a href={buscadores[0]}>Google</a><br />
+        <a href={buscadores[1]}>Bing</a><br />
+        <a href={buscadores[2]}>Yahoo</a><br />                
       </div>
     );
-  }
-
-  retornarAleatorio() {
-    return Math.trunc(Math.random() * 10);
   }
 
 }
